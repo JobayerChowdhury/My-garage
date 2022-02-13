@@ -1,0 +1,26 @@
+.cars img{
+    width: 100%; 
+    
+}
+.cars{
+    /* display: grid;
+    grid-row-start: 1;
+    grid-row-end: 3; */
+    border-bottom: 1px solid lightslategray;
+    margin:20px;
+}
+/* .grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-row-start: 1;
+    grid-row-end: 3;
+} */
+
+    .cars button{
+        color:white;
+        background-color: goldenrod;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        
+
+    }

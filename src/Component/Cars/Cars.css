@@ -1,0 +1,8 @@
+.car-container{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+
+}
+.garage-container{
+    border: 1px dashed gray
+}
