@@ -1,4 +1,6 @@
 import React from 'react';
+import GG from '../Garage_gellary/GG';
+
 import './Garage.css'
 
 const Garage = (props) => {
@@ -13,12 +15,16 @@ const Garage = (props) => {
     return (
         <div>
             <h3>My Garage:</h3>
-            <h4>ordered item:{props.garage.length}</h4>
+            <h4>ordered item:{garage.length}</h4>
             <h4>total:{total.toFixed(2)}$
             </h4>
-            {/* <p>Shipping:{shipping}</p> */}
+
             <p>tax:{tax.toFixed(2)}</p>
             <p>GrandTotal:{grandTotal.toFixed(2)}</p>
+            {
+                garage.map(garage => <GG garage={garage}></GG>)
+            }
+
         </div>
     );
 };

@@ -5,21 +5,22 @@ import Garage from '../Garage/Garage';
 
 import './Cars.css';
 const Cars = () => {
+    const [garage, setGarage] = useState([]);
     const [cars, setCars] = useState([]);
     useEffect(() => {
         fetch('cars.json')
             .then(res => res.json())
             .then(data => setCars(data))
     }, [])
-    const [garage, setGarage] = useState([]);
 
-    const handleAddToCart = (garage) => {
-        const newgarage = [...cars, garage];
+
+    const handleAddToCart = (car) => {
+        const newgarage = [...garage, car];
         setGarage(newgarage);
     }
     return (
         <div className='car-container'>
-            <div className='display-containter'>
+            <div className='display-container'>
                 {/* <h1> cars number: {cars.length}</h1> */}
                 {
                     cars.map(car =>
@@ -36,7 +37,9 @@ const Cars = () => {
 
             </div>
             <div className='garage-container'>
-                <Garage garage={garage}></Garage>
+                <Garage garage={garage}
+
+                ></Garage>
 
             </div>
         </div>
